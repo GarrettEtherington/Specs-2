@@ -2,7 +2,7 @@ import React from "react"
 
 const Header = () => {
    <header>
-        <H2>Jay-Chuan's Movie App</H2>
+        <h2>Jay-Chuan's Movie App</h2>
    </header> 
 }
 

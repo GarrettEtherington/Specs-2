@@ -4,8 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header'
 import MovieScreen from './components/MovieScreen'
+import axios from 'axios'
 
 function App() {
+
   const [list, setList] = useState([])
   const [movieList, setMovieList] = useState([])
   const [page, setPage] = useState(1)
@@ -13,7 +15,7 @@ function App() {
   
 const getData = () => {
   axios
-     .get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`)
+     .get(`https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_APP_API_KEY}&language=en-US&page=${page}`)
      .then((res) => {
            console.log(res.data.results)
            setMovieList(res.data.results)
