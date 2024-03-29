@@ -1,9 +1,12 @@
 import React from "react"
 
 const Header = () => {
-   <header>
+   return(
+      <header>
         <h2>Jay-Chuan's Movie App</h2>
-   </header> 
+      </header> 
+   )
+   
 }
 
 
